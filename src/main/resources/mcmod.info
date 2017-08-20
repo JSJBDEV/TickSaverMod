@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ticksave",
+  "name": "Tikc Saver",
+  "description": "Save your Ticks!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Acrogenous A.K.A acrominer"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
