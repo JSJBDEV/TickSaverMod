@@ -86,7 +86,7 @@ public class ItemBase extends Item {
     }
 
     @Override
-    public void onUpdate(ItemStack p_onUpdate_1_, World p_onUpdate_2_, Entity player, int p_onUpdate_4_, boolean p_onUpdate_5_) {
+    public void onUpdate(ItemStack p_onUpdate_1_, World world, Entity player, int p_onUpdate_4_, boolean p_onUpdate_5_) {
         i++;
         if(this.startRec)
         {
@@ -102,7 +102,7 @@ public class ItemBase extends Item {
                 System.out.println(i);
                 //player.setPositionAndRotation(loc.get(i-1).getX(),loc.get(i-1).getY(),loc.get(i-1).getZ(),yaw.get(i-1),pitch.get(i-1));
                 player.moveToBlockPosAndAngles(loc.get(i-1),yaw.get(i-1),pitch.get(i-1));
-                //player.setPositionAndUpdate(loc.get(i).getX(),loc.get(i).getY(),loc.get(i).getZ());
+                player.setPositionAndUpdate(player.posX,player.posY,player.posZ);
             }
             else
             {
@@ -111,6 +111,6 @@ public class ItemBase extends Item {
             }
         }
 
-        super.onUpdate(p_onUpdate_1_, p_onUpdate_2_, player, p_onUpdate_4_, p_onUpdate_5_);
+        super.onUpdate(p_onUpdate_1_, world, player, p_onUpdate_4_, p_onUpdate_5_);
     }
 }
